@@ -1,9 +1,9 @@
-model teacher {
+model Teacher {
     id          String @id @default(auto()) @map("_id") @db.ObjectId
     Name        String
     FirstName   String
     SecoundName String
     thirdName   String
-    email       String
+    email       String @unique
     password    String
 }

@@ -1,4 +1,5 @@
 import express from "express";
+import teacherRoutes from "./routes/teacherRoutes";
 const port = 3000;
 const app = express();
 
@@ -10,5 +11,6 @@ app.get("/api/v1", (req, res) => {
   });
   console.log("hello world");
 });
+app.use("/api/v1/teacher", teacherRoutes);
 
 app.listen("3000", () => console.log(`http://localhost:${port}`));
